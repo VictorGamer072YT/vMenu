@@ -19,23 +19,23 @@ namespace vMenuClient
             {
                 if (label == "veh_color_taxi_yellow")
                 {
-                    if (CitizenFX.Core.Native.API.GetLabelText("veh_color_taxi_yellow") == "NULL")
+                    if (GetLabelText("veh_color_taxi_yellow") == "NULL")
                     {
-                        CitizenFX.Core.Native.API.AddTextEntry("veh_color_taxi_yellow", $"Taxi {CitizenFX.Core.Native.API.GetLabelText("IEC_T20_2")}");
+                        AddTextEntry("veh_color_taxi_yellow", $"Taxi {GetLabelText("IEC_T20_2")}");
                     }
                 }
                 else if (label == "veh_color_off_white")
                 {
-                    if (CitizenFX.Core.Native.API.GetLabelText("veh_color_off_white") == "NULL")
+                    if (GetLabelText("veh_color_off_white") == "NULL")
                     {
-                        CitizenFX.Core.Native.API.AddTextEntry("veh_color_off_white", "Off White");
+                        AddTextEntry("veh_color_off_white", "Off White");
                     }
                 }
                 else if (label == "VERY_DARK_BLUE")
                 {
-                    if (CitizenFX.Core.Native.API.GetLabelText("VERY_DARK_BLUE") == "NULL")
+                    if (GetLabelText("VERY_DARK_BLUE") == "NULL")
                     {
-                        CitizenFX.Core.Native.API.AddTextEntry("VERY_DARK_BLUE", "Very Dark Blue");
+                        AddTextEntry("VERY_DARK_BLUE", "Very Dark Blue");
                     }
                 }
 

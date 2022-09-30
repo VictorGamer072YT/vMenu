@@ -50,8 +50,8 @@ namespace vMenuClient
         public bool VehicleFrozen { get; private set; } = false;
         public bool VehicleTorqueMultiplier { get; private set; } = false;
         public bool VehiclePowerMultiplier { get; private set; } = false;
-        public float VehicleTorqueMultiplierAmount { get; private set; } = 2f;
-        public float VehiclePowerMultiplierAmount { get; private set; } = 2f;
+        public float VehicleTorqueMultiplierAmount { get; private set; } = 0.5f;
+        public float VehiclePowerMultiplierAmount { get; private set; } = 0.5f;
 
         private Dictionary<MenuItem, int> vehicleExtras = new Dictionary<MenuItem, int>();
         #endregion

@@ -22,7 +22,8 @@ namespace vMenuClient
             "Very Fast",
             "Extremely Fast",
             "Extremely Fast v2.0",
-            "Max Speed"
+            "Max Speed",
+            "Max Speed v2.0"
         };
 
         public NoClip()

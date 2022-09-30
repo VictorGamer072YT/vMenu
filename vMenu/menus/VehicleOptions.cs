@@ -176,9 +176,9 @@ namespace vMenuClient
                 GetLabelText("CMOD_PLA_4"), "North Yankton" };
             MenuListItem setLicensePlateType = new MenuListItem("License Plate Type", licensePlates, 0, "Choose a license plate type and press ~r~enter ~s~to apply " +
                 "it to your vehicle.");
-            var torqueMultiplierList = new List<string> { "x2", "x4", "x8", "x16", "x32", "x64", "x128", "x256", "x512", "x1024" };
+            var torqueMultiplierList = new List<string> { "x0.5", "x2", "x4", "x8", "x16", "x32", "x64", "x128", "x256", "x512", "x1024" };
             MenuListItem torqueMultiplier = new MenuListItem("Set Engine Torque Multiplier", torqueMultiplierList, 0, "Set the engine torque multiplier.");
-            var powerMultiplierList = new List<string> { "x2", "x4", "x8", "x16", "x32", "x64", "x128", "x256", "x512", "x1024" };
+            var powerMultiplierList = new List<string> { "x0.5", "x2", "x4", "x8", "x16", "x32", "x64", "x128", "x256", "x512", "x1024" };
             MenuListItem powerMultiplier = new MenuListItem("Set Engine Power Multiplier", powerMultiplierList, 0, "Set the engine power multiplier.");
             List<string> speedLimiterOptions = new List<string>() { "Set", "Reset", "Custom Speed Limit" };
             MenuListItem speedLimiter = new MenuListItem("Speed Limiter", speedLimiterOptions, 0, "Set your vehicles max speed to your ~y~current speed~s~. Resetting your vehicles max speed will set the max speed of your current vehicle back to default. Only your current vehicle is affected by this option.");

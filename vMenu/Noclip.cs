@@ -69,7 +69,10 @@ namespace vMenuClient
                     BeginScaleformMovieMethod(Scale, "SET_DATA_SLOT");
                     ScaleformMovieMethodAddParamInt(1);
                     PushScaleformMovieMethodParameterString("~INPUT_MOVE_LR~");
+                    if (!FollowCamMode)
                     PushScaleformMovieMethodParameterString($"Turn Left/Right");
+                    else
+                    PushScaleformMovieMethodParameterString($"Move Left/Right");
                     EndScaleformMovieMethod();
 
                     BeginScaleformMovieMethod(Scale, "SET_DATA_SLOT");
@@ -131,6 +134,7 @@ namespace vMenuClient
                 if (Game.PlayerPed.IsInVehicle())
                     Game.DisableControlThisFrame(0, Control.VehicleRadioWheel);
 
+                var xoff = 0.0f; 
                 var yoff = 0.0f;
                 var zoff = 0.0f;
 
@@ -153,6 +157,16 @@ namespace vMenuClient
                     {
                         yoff = -0.5f;
                     }
+
+                    if (FollowCamMode && Game.IsDisabledControlPressed(0, Control.MoveLeftOnly))
+                    {
+                        xoff = -0.5f;
+                    }
+                    if (FollowCamMode && Game.IsDisabledControlPressed(0, Control.MoveRightOnly))
+                    {
+                        xoff = 0.5f;
+                    }
+
                     if (!FollowCamMode && Game.IsDisabledControlPressed(0, Control.MoveLeftOnly))
                     {
                         SetEntityHeading(Game.PlayerPed.Handle, GetEntityHeading(Game.PlayerPed.Handle) + 3f);
@@ -161,6 +175,7 @@ namespace vMenuClient
                     {
                         SetEntityHeading(Game.PlayerPed.Handle, GetEntityHeading(Game.PlayerPed.Handle) - 3f);
                     }
+
                     if (Game.IsDisabledControlPressed(0, Control.Cover))
                     {
                         zoff = 0.21f;
@@ -180,7 +195,7 @@ namespace vMenuClient
                     moveSpeed *= 1.8f;
                 }
                 moveSpeed = moveSpeed / (1f / GetFrameTime()) * 60;
-                newPos = GetOffsetFromEntityInWorldCoords(noclipEntity, 0f, yoff * (moveSpeed + 0.3f), zoff * (moveSpeed + 0.3f));
+                newPos = GetOffsetFromEntityInWorldCoords(noclipEntity, xoff * (moveSpeed + 0.3f), yoff * (moveSpeed + 0.3f), zoff * (moveSpeed + 0.3f));
 
                 var heading = GetEntityHeading(noclipEntity);
                 SetEntityVelocity(noclipEntity, 0f, 0f, 0f);

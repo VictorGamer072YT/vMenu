@@ -312,6 +312,10 @@ namespace vMenuShared
             // MPSUM2 DLC (v 2699)
             WPPrecisionRifle,
             WPTacticalRifle,
+            //MPCHRISTMAS3 DLC (b2802)
+            WPPistolXM3,
+            WPCandyCane,
+            WPRailgunXM3,
             #endregion
 
             // Weapon Loadouts Menu

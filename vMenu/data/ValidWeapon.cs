@@ -226,6 +226,10 @@ namespace vMenuClient
             //MPSUM2 DLC (V 2699)
             { "weapon_tacticalrifle", GetLabelText("WTD_TACRIFLE") },
             { "weapon_precisionrifle", GetLabelText("WTD_PRCSRIFLE") },
+            //MPCHRISMAS3 dlc b2802
+            { "weapon_pistolxm3", GetLabelText("WTD_PISTOLXM3") },
+            { "weapon_candycane", GetLabelText("WTD_CANDYCANE") },
+            { "weapon_railgunxm3", GetLabelText("WTD_RAILGUNXM3") },
         };
 
         public static readonly Dictionary<string, string> weaponNames = new Dictionary<string, string>()
@@ -336,6 +340,10 @@ namespace vMenuClient
             //MPSUM2 DLC (V 2699)
             { "weapon_tacticalrifle", GetLabelText("WT_TACRIFLE") },
             { "weapon_precisionrifle", GetLabelText("WT_PRCSRIFLE") },
+            //MPCHRISMAS3 dlc b2802
+            { "weapon_pistolxm3", GetLabelText("WT_PISTOLXM3") },
+            { "weapon_candycane", GetLabelText("WT_CANDYCANE") },
+            { "weapon_railgunxm3", GetLabelText("WT_RAILGUNXM3") },
         };
         #endregion
 
@@ -448,6 +456,12 @@ namespace vMenuClient
             //MPSUM2 DLC (V 2699)
             ["weapon_tacticalrifle"] = Permission.WPTacticalRifle,
             ["weapon_precisionrifle"] = Permission.WPPrecisionRifle,
+            //MPCHRISTMAS3 DLC (b2802)
+            // No, I don't care about permissions at all.
+            // I'll remove all of them at some point
+            ["weapon_pistolxm3"] = Permission.WPPistolXM3,
+            ["weapon_candycane"] = Permission.WPCandyCane,
+            ["weapon_railgunxm3"] = Permission.WPRailgunXM3,
         };
         #endregion
 
@@ -832,6 +846,9 @@ namespace vMenuClient
             ["COMPONENT_TACTICALRIFLE_CLIP_02"] = GetLabelText("WCT_CLIP2"),
             ["COMPONENT_PRECISIONRIFLE_CLIP_01"] = GetLabelText("WCT_CLIP1"),
             ["COMPONENT_AT_AR_FLSH_REH"] = GetLabelText("WCT_FLASH"),
+            //MPCHRISMAS3 dlc b2802
+            ["COMPONENT_PISTOLXM3_CLIP_01"] = GetLabelText("WCT_CLIP1"),
+            ["COMPONENT_PISTOLXM3_SUPP"] = GetLabelText("WCD_PI_SUPP"),
         };
         #endregion
 

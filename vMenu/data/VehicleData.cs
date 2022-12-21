@@ -354,7 +354,7 @@ namespace vMenuClient
                 "GRESLEY",
                 "HABANERO",
                 "HUNTLEY",
-                "ISS8", // LOS SANTOS DRUG WAR (MPCHRISTMAS3)DLC - Requires b2802
+                "ISSI8", // LOS SANTOS DRUG WAR (MPCHRISTMAS3)DLC - Requires b2802
                 "IWAGEN", // THE CONTRACT (MPSECURITY) DLC - Requires b2545
                 "JUBILEE", // THE CONTRACT (MPSECURITY) DLC - Requires b2545
                 "LANDSTALKER",

@@ -173,7 +173,7 @@ namespace vMenuClient
             MenuListItem setDirtLevel = new MenuListItem("Set Dirt Level", dirtlevel, 0, "Select how much dirt should be visible on your vehicle, press ~r~enter~s~ " +
                 "to apply the selected level.");
             var licensePlates = new List<string> { GetLabelText("CMOD_PLA_0"), GetLabelText("CMOD_PLA_1"), GetLabelText("CMOD_PLA_2"), GetLabelText("CMOD_PLA_3"),
-                GetLabelText("CMOD_PLA_4"), "North Yankton" };
+                GetLabelText("CMOD_PLA_4"), GetLabelText("PROL") }; // PROL = North Yankton
             MenuListItem setLicensePlateType = new MenuListItem("License Plate Type", licensePlates, 0, "Choose a license plate type and press ~r~enter ~s~to apply " +
                 "it to your vehicle.");
             var torqueMultiplierList = new List<string> { "x0.5", "x2", "x4", "x8", "x16", "x32", "x64", "x128", "x256", "x512", "x1024", "x2048" };
@@ -183,7 +183,7 @@ namespace vMenuClient
             List<string> speedLimiterOptions = new List<string>() { "Set", "Reset", "Custom Speed Limit" };
             MenuListItem speedLimiter = new MenuListItem("Speed Limiter", speedLimiterOptions, 0, "Set your vehicles max speed to your ~y~current speed~s~. Resetting your vehicles max speed will set the max speed of your current vehicle back to default. Only your current vehicle is affected by this option.");
             #endregion
-
+            
             #region Submenus
             // Submenu's
             VehicleModMenu = new Menu("Mod Menu", "Vehicle Mods");
